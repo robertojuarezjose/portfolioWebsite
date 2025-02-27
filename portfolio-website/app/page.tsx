@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import {redirect} from "next/navigation";
 
 export default function Home() {
     return (
@@ -26,7 +27,7 @@ export default function Home() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Button size="lg" className="bg-white text-blue-950 font-bold hover:bg-gray-200">
+                    <Button size="lg" className="bg-white text-blue-950 font-bold hover:bg-gray-200" onClick={() => redirect("/About-Me")}>
                         Get Started
                     </Button>
                 </motion.div>

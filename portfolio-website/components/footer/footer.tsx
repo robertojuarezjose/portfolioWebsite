@@ -22,7 +22,7 @@ const Footer = () => {
                     <FaHackerrank size={24} />
                 </a>
                 <a
-                    href="https://www.linkedin.com/in/roberto-juarez-b0b76a225/"
+                    href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300"
