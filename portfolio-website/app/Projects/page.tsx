@@ -7,53 +7,38 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
     {
-        "Name": "AI Assistant",
-        "Description": "An AI-powered virtual assistant.",
-        "Url": "https://example.com/ai-assistant",
-        "Date_Created": "2024-05-27",
-        "Tech_Stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+        "Name": "Verification Cargo System",
+        "Description": "Verifies cargo goes out with the correct truck and driver.",
+        "Url": "",
+        "Date_Created": "2024-11-27",
+        "Tech_Stack": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "prisma"],
         "Owner": "Jose Roberto Juarez"
     },
     {
-        "Name": "Crypto Tracker",
-        "Description": "A real-time cryptocurrency tracking app.",
-        "Url": "https://example.com/crypto-tracker",
-        "Date_Created": "2023-09-13",
-        "Tech_Stack": ["React", "Node.js", "MongoDB"],
+        "Name": "Store ecommerce and inventory management system",
+        "Description": "A real-time reports and inventory management system.",
+        "Url": "",
+        "Date_Created": "2023-08-13",
+        "Tech_Stack": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "prisma"],
         "Owner": "Jose Roberto Juarez"
     },
     {
-        "Name": "E-Learning Platform",
-        "Description": "A modern e-learning platform for courses.",
-        "Url": "https://example.com/e-learning-platform",
-        "Date_Created": "2024-08-28",
-        "Tech_Stack": ["Python", "Django", "PostgreSQL"],
-        "Owner": "Jose Roberto Juarez"
+        "Name": "Warehouse Management System",
+        "Description": "Slam distribution warehouse management system.",
+        "Url": "",
+        "Date_Created": "2024-06-14",
+        "Tech_Stack": ["Jquery", "C# .Net", "Sql Server"],
+        "Owner": "Op Computer business Solutions"
     },
     {
-        "Name": "Weather App",
-        "Description": "A weather forecasting app with AI.",
-        "Url": "https://example.com/weather-app",
-        "Date_Created": "2024-11-20",
-        "Tech_Stack": ["Vue.js", "Firebase", "Chart.js"],
-        "Owner": "Jose Roberto Juarez"
+        "Name": "Single Sign on and Authentication",
+        "Description": "Single sign on and authentication for the application suite for Heb",
+        "Url": "",
+        "Date_Created": "2022-11-20",
+        "Tech_Stack": ["React.js", "Flask"],
+        "Owner": "HEB Digital"
     },
-    {
-        "Name": "Fitness Tracker",
-        "Description": "A fitness tracking app with smart analytics.",
-        "Url": "https://example.com/fitness-tracker",
-        "Date_Created": "2023-11-29",
-        "Tech_Stack": ["Flutter", "Dart", "Firebase"],
-        "Owner": "Jose Roberto Juarez"
-    },
-    {
-        "Name": "Expense Manager",
-        "Description": "An expense manager with budget planning.",
-        "Url": "https://example.com/expense-manager",
-        "Date_Created": "2024-05-16",
-        "Tech_Stack": ["Swift", "Kotlin", "Firebase"],
-        "Owner": "Jose Roberto Juarez"
-    }
+
 ];
 
 const Page = () => {
@@ -79,7 +64,7 @@ const Page = () => {
                         <TableHead>Tech Stack</TableHead>
                         <TableHead>Date Created</TableHead>
                         <TableHead>Owner</TableHead>
-                        <TableHead>Link</TableHead>
+                        {/*<TableHead>Link</TableHead>*/}
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -90,11 +75,11 @@ const Page = () => {
                             <TableCell>{project.Tech_Stack.join(", ")}</TableCell>
                             <TableCell>{project.Date_Created}</TableCell>
                             <TableCell>{project.Owner}</TableCell>
-                            <TableCell>
-                                <Link href={project.Url} target="_blank" className="text-blue-600 underline">
-                                    Visit
-                                </Link>
-                            </TableCell>
+                            {/*<TableCell>*/}
+                            {/*    <Link href={project.Url} target="_blank" className="text-blue-600 underline">*/}
+                            {/*        Visit*/}
+                            {/*    </Link>*/}
+                            {/*</TableCell>*/}
                         </TableRow>
                     ))}
                 </TableBody>
