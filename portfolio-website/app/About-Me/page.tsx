@@ -44,9 +44,9 @@ export default function About() {
                 About Me
             </motion.h1>
             <p className="text-lg text-gray-700 max-w-2xl mb-6">
-                Hello, I’m Jose Roberto Juarez – a dedicated software engineer with a passion for modern web development. I specialize in crafting clean, scalable, and high-performance applications using Next.js, TypeScript, Tailwind CSS, ASP.Net Core, and more.
+                Full Stack Software Developer with experience in implementing and deploying enterprise applications across diverse environments, including AI assistant and prompt engineering. Proven expertise in leading the development of custom, complex systems and web applications leveraging React, ASP.NET Core, Electron, Next.js, and modern UI frameworks. Currently specializing in Cloud and DevOps to drive infrastructure modernization initiatives, adeptly utilizing AWS, Azure, Google Cloud, and Oracle Cloud platforms.
                 <br /><br />
-                In my roles as a Full Stack Engineer at OP Computer Business Solutions and a contract Software Engineer at Rocket Labs Technology LLC, I design, develop, and implement features across both frontend and backend systems. I also manage complex database configurations, ensuring robust performance and seamless integration.
+                In my current role as a Full Stack Software Engineer at OP Computer Business Solutions, I develop APIs, UIs, and database schemas for enterprise logistics and WMS, focusing on efficiency and automation. Previously, at Rocket Labs Technologies, I led teams and managed the full project lifecycle for scalable web applications using ASP.NET Core and Next.js/React. I also have experience as a Co-op Software Engineer at H-E-B Digital, where I built authentication systems and automated deployments.
             </p>
 
             {/* Contact Me Button */}

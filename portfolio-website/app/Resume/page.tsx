@@ -27,7 +27,24 @@ const Resume = () => {
                         GitHub
                     </a>
                 </div>
-                {/* Download Button */}
+                <div className="mt-2">
+                    <a
+                        href="https://portfolio-website-swart-tau.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline mr-4"
+                    >
+                        Website
+                    </a>
+                    <a
+                        href="https://robertojuarezjose.medium.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline"
+                    >
+                        Portfolio
+                    </a>
+                </div>
                 <div className="mt-4">
                     <a
                         href="/RobertoJuarez_Resume.pdf"
@@ -49,98 +66,83 @@ const Resume = () => {
                 <p className="mb-1">
                     <span className="font-semibold">GPA:</span> 3.7
                 </p>
-                <p>
-                    <span className="font-semibold">Programming Languages and Technologies:</span> Next.js, TypeScript, Tailwind, React, Shadcn, Redux, TanStack Query, Axios, Java, Spring Boot, C#, Asp.Net, JavaScript, Python, Docker, Kubernetes, MySQL, GitHub, DevOps, Linux, Bash/Python Scripts, MongoDB, GitOps, Maven, jQuery, Unit Testing, Cypress, CI/CD, dbDecrypt, Remote Desktop.
-                </p>
+            </section>
+
+            {/* Skills */}
+            <section className="mb-8">
+                <h2 className="text-2xl font-semibold mb-2">SKILLS</h2>
+                <p className="mb-1"><span className="font-semibold">Languages & Frameworks:</span> C#, ASP.NET Core, React, Next.js, JavaScript, Python, JQuery</p>
+                <p className="mb-1"><span className="font-semibold">UI & Tools:</span> Material UI, ShadCN, Tailwind CSS, Cursor AI, Visual Studio, Git & GitHub, Postman, Axios, React Query, ChatGPT, Redis & Redis Bloom, Hangfire, Seq & serilog</p>
+                <p className="mb-1"><span className="font-semibold">Cloud & DevOps:</span> AWS, Azure, Google Cloud, Oracle Cloud, Terraform, Ansible, Docker</p>
             </section>
 
             {/* Experience */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-2">EXPERIENCE</h2>
-
                 <article className="mb-6">
                     <h3 className="text-xl font-bold">OP Computer Business Solutions – Full Stack Software Engineer</h3>
                     <p className="italic mb-1">May 2024 – Present</p>
                     <ul className="list-disc ml-6">
-                        <li>
-                            Software Analysis, Design, & Development to build and maintain components of an Enterprise Control System such as an international trades system or WMS.
-                        </li>
-                        <li>
-                            Developed full stack high performance features including design, testing, deployment, and maintenance. Administered databases, wrote stored procedures, synchronized dev-databases with production databases, and provided complex query solutions.
-                        </li>
-                        <li>
-                            Provided customer software support remotely, updated real-time systems on remote servers, and developed system migration strategies for seamless integration.
-                        </li>
-                        <li>
-                            Conducted weekly meetings with stakeholders to discuss project status, updates, and feature implementations, and provided detailed Excel reports outlining progress and upcoming tasks.
-                        </li>
+                        <li>Developed APIs, UI, and designed database schemas for enterprise logistics and Warehouse Management Systems (WMS), significantly enhancing efficiency in commercial trade operations with a primary focus on WMS functionalities.</li>
+                        <li>Implemented comprehensive Cyclic Inventory operations and reporting modules, alongside automated order processing using FIFO methodology using complex stored procedures.</li>
+                        <li>Designed and developed critical system features, including Lot Pallet Number (LPN) management, direct order processing, repack order handling, and dynamic ordering based on SKU and LPN criteria.</li>
+                        <li>Optimized the original system architecture to introduce enhanced functionalities, significantly improving core operational capabilities such as picking, sorting, inbound, and outbound logistics.</li>
+                        <li>Streamlined departure scanning operations for LPN, boosting accuracy and reducing processing time.</li>
+                        <li>Built several monitoring tools to track cargo box statuses, ensuring continuous visibility from warehouse entry through broker inspection, thus maintaining complete lifecycle management using advanced javascript strategies along with APIs for data fetching.</li>
+                        <li>Contributed to developing monitors for tracking document processing workflows, ensuring efficient and transparent documentation handling.</li>
+                        <li>Deployed projects remotely to a private cloud environment.</li>
                     </ul>
-                    <p className="mt-2">
-                        <span className="font-semibold">Tech stack:</span> C#, Asp.Net, MySQL, NOSQL, MongoDB, JavaScript, jQuery, Ajax, Bootstrap, Python, Django, GitHub.
-                    </p>
                 </article>
-
                 <article className="mb-6">
-                    <h3 className="text-xl font-bold">Rocket Labs Technologies – Software Developer (By Contract)</h3>
-                    <p className="italic mb-1">Jan 2023 – Present</p>
+                    <h3 className="text-xl font-bold">Rocket Labs Technologies – Software Developer</h3>
+                    <p className="italic mb-1">Jan 2023 – Nov 2024</p>
                     <ul className="list-disc ml-6">
-                        <li>
-                            Designed, developed, and implemented new features on both small and large scale system applications, enhancing functionality and user experience.
-                        </li>
-                        <li>
-                            Identified and resolved software bugs through thorough debugging and testing, ensuring high-quality deliverables and optimal performance.
-                        </li>
-                        <li>
-                            Collaborated with cross-functional teams to gather requirements and translate them into technical specifications, driving project success.
-                        </li>
+                        <li>Designed and developed scalable web applications using ASP.NET Core for backend services and Next.js/React for frontend development, ensuring robust performance and maintainability.</li>
+                        <li>Architected database schemas, API endpoints, application flowcharts, and user interfaces, aligning technical implementations closely with business objectives.</li>
+                        <li>Led project teams of 1-3 developers, overseeing major feature implementations, technical decisions, and overall technology stack selections.</li>
+                        <li>Managed complete project lifecycle in a startup environment, including requirements gathering, technology evaluation, cost analysis, full-stack development, and deployment.</li>
                     </ul>
-                    <p className="mt-2">
-                        <span className="font-semibold">Tech stack:</span> Next.js, TypeScript, Shadcn, React, TanStack Query, Axios, MySQL, JavaScript, Java Spring Boot, GitHub.
-                    </p>
                 </article>
-
                 <article className="mb-6">
-                    <h3 className="text-xl font-bold">H-E-B Digital – Co-op Student Software Engineer</h3>
+                    <h3 className="text-xl font-bold">H-E-B Digital – Co-op Software Engineer</h3>
                     <p className="italic mb-1">Aug 2022 – Dec 2022</p>
                     <ul className="list-disc ml-6">
-                        <li>
-                            Collaborated with software engineers to build a unified OneLogin and authentication web application using Flask and React.
-                        </li>
-                        <li>
-                            Participated in a two-week sprint cycle guided by a Scrum Master, enhancing teamwork and project management skills within an Agile framework.
-                        </li>
-                        <li>
-                            Designed and developed a user-friendly landing page, integrating it with SAML authentication via OneLogin to enhance security and user experience.
-                        </li>
-                        <li>
-                            Leveraged GitLab CI/CD for automated testing and deployment, improving code quality and efficiency.
-                        </li>
+                        <li>Developed a unified OneLogin authentication application using Flask and React, enhancing security and user accessibility.</li>
+                        <li>Actively participated in Agile sprints, collaborating with team members and a Scrum Master to meet project deadlines.</li>
+                        <li>Designed and integrated a secure landing page with SAML authentication, ensuring a seamless user experience.</li>
+                        <li>Utilized GitLab CI/CD pipelines to automate testing and deployment, reducing development cycle time.</li>
                     </ul>
-                    <p className="mt-2">
-                        <span className="font-semibold">Tech stack:</span> Flask-Python, React-JavaScript, Docker, GitLab CI/CD.
-                    </p>
                 </article>
             </section>
 
             {/* Projects */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-2">PROJECTS</h2>
-                <article>
-                    <h3 className="text-xl font-bold">Document Storage System: ERP System</h3>
+                <article className="mb-6">
+                    <h3 className="text-xl font-bold">Enterprise Logistics Monitoring System</h3>
                     <ul className="list-disc ml-6">
-                        <li>
-                            Developed a secure Document Storage System enabling the receipt, storage, and management of PDF files through web authentication.
-                        </li>
-                        <li>
-                            Deployed a web server on AWS, controlled from a local terminal, ensuring reliable performance.
-                        </li>
-                        <li>
-                            Utilized cron jobs for API communication to automate data retrieval and storage in a MySQL database.
-                        </li>
+                        <li>Developed a real-time logistics monitoring platform that provides analytics on shipping, warehouse operations, and trade compliance.</li>
+                        <li>Integrated live data tracking with warehouse management tools to optimize supply chain operations.</li>
+                        <li>Tech Stack: ASP.NET, C#, MySQL, MongoDB, jQuery, JavaScript</li>
                     </ul>
-                    <p className="mt-2">
-                        <span className="font-semibold">Tech stack:</span> PHP, MySQL, JavaScript, AWS, DevOps.
-                    </p>
+                </article>
+                <article className="mb-6">
+                    <h3 className="text-xl font-bold">Document Storage System (ERP System)</h3>
+                    <ul className="list-disc ml-6">
+                        <li>Built a secure, scalable document storage platform for managing PDF files, integrated with robust web-based authentication.</li>
+                        <li>Deployed the application on AWS and managed performance through DevOps best practices.</li>
+                        <li>Automated data retrieval and storage processes using cron jobs, ensuring timely updates to a MySQL database.</li>
+                        <li>Tech Stack: PHP, MySQL, JavaScript, AWS, DevOps</li>
+                    </ul>
+                </article>
+                <article className="mb-6">
+                    <h3 className="text-xl font-bold">User Authentication Dashboard</h3>
+                    <ul className="list-disc ml-6">
+                        <li>Created a multi-functional authentication dashboard with React and Flask, supporting SAML and OAuth protocols.</li>
+                        <li>Optimized backend API performance, reducing authentication time by 30%.</li>
+                        <li>Implemented role-based access controls for enhanced security and user management.</li>
+                        <li>Tech Stack: React, Flask, Docker, GitHub, MySQL</li>
+                    </ul>
                 </article>
             </section>
 
