@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Input } from "@/components/ui/input";
+// Update the import path below to the correct location if different
+import { Input } from "../../components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const projects = [

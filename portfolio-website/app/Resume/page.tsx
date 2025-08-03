@@ -31,17 +31,17 @@ const Resume = () => {
         </p>
         <div className="mt-4 flex justify-center space-x-6">
           <a href="/RobertoJuarez_Resume.pdf" download>
-            <Button size="md" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
               Download PDF
             </Button>
           </a>
           <a href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/" target="_blank" rel="noopener noreferrer">
-            <Button size="md" className="border border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Button size="default" className="border border-blue-600 text-blue-600 hover:bg-blue-50">
               LinkedIn
             </Button>
           </a>
           <a href="https://github.com/robertojuarezjose" target="_blank" rel="noopener noreferrer">
-            <Button size="md" className="border border-gray-600 text-gray-600 hover:bg-gray-100">
+            <Button size="default" className="border border-gray-600 text-gray-600 hover:bg-gray-100">
               GitHub
             </Button>
           </a>
