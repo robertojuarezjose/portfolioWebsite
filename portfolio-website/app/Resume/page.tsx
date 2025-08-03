@@ -1,181 +1,151 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 const Resume = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <main className="max-w-4xl mx-auto p-6 space-y-16">
       {/* Header */}
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold">JOSE ROBERTO JUAREZ</h1>
-        <p className="mt-2 text-lg">
-          Laredo, Texas | (956) 955-0163 | robertojuarezjose90@gmail.com
+      <motion.header
+        className="text-center"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          JOSE ROBERTO JUAREZ
+        </h1>
+        <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
+          Laredo, Texas | (956) 955-0163 |{' '}
+          <a href="mailto:robertojuarezjose90@gmail.com" className="text-blue-500 hover:underline">
+            robertojuarezjose90@gmail.com
+          </a>
         </p>
-        <p className="mt-1 text-lg">
-          Freelancing Email: rjuarez@ondevsystem.com
+        <p className="mt-1 text-lg text-gray-700 dark:text-gray-300">
+          Freelancing Email:{' '}
+          <a href="mailto:rjuarez@ondevsystem.com" className="text-blue-500 hover:underline">
+            rjuarez@ondevsystem.com
+          </a>
         </p>
-        <div className="mt-2">
-          <a
-            href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline mr-4"
-          >
-            LinkedIn
+        <div className="mt-4 flex justify-center space-x-6">
+          <a href="/RobertoJuarez_Resume.pdf" download>
+            <Button size="md" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Download PDF
+            </Button>
           </a>
-          <a
-            href="https://github.com/robertojuarezjose"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            GitHub
+          <a href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/" target="_blank" rel="noopener noreferrer">
+            <Button size="md" className="border border-blue-600 text-blue-600 hover:bg-blue-50">
+              LinkedIn
+            </Button>
           </a>
-        </div>
-        <div className="mt-2">
-          <a
-            href="https://portfolio-website-swart-tau.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline mr-4"
-          >
-            Website
-          </a>
-          <a
-            href="https://robertojuarezjose.medium.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Portfolio
+          <a href="https://github.com/robertojuarezjose" target="_blank" rel="noopener noreferrer">
+            <Button size="md" className="border border-gray-600 text-gray-600 hover:bg-gray-100">
+              GitHub
+            </Button>
           </a>
         </div>
-        <div className="mt-4">
-          <a
-            href="/RobertoJuarez_Resume.pdf"
-            download
-            className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
-          >
-            Download Resume
-          </a>
-        </div>
+      </motion.header>
 
-        {/* Professional Summary */}
-        <p className="mt-6 text-center italic">
-          Full Stack Software Developer with 2+ years of experience designing, building, and deploying enterprise-grade applications across diverse environments, specializing in logistics and Warehouse Management Systems (WMS). Proven expertise in front-end and back-end development using modern frameworks such as React, Next.js, ASP.NET Core, and SQL Server, alongside hands-on experience with cloud and DevOps practices leveraging AWS, Azure, and Terraform. Demonstrated ability to independently manage end-to-end software delivery, optimize system performance, and maintain strong client relationships through effective communication and proactive problem-solving. Passionate about continually adopting emerging technologies and improving development processes for maximum efficiency and reliability.
+      {/* Professional Summary */}
+      <motion.section
+        className="prose prose-lg mx-auto text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <p className="italic text-gray-600 dark:text-gray-400">
+          Full Stack Software Developer with 2+ years of experience designing, building, and deploying enterprise-grade applications across diverse environments, specializing in logistics and Warehouse Management Systems (WMS). Proven expertise in front-end and back-end development using React, Next.js, ASP.NET Core, and SQL Server, with hands-on cloud and DevOps experience on AWS, Azure, and Terraform.
         </p>
-      </header>
+      </motion.section>
 
-      {/* Education */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">EDUCATION</h2>
-        <p className="mb-1 font-medium">
-          The University of Texas at San Antonio — Bachelor of Science, Computer Science
-        </p>
-        <p className="mb-1">GPA: 3.7</p>
-        <p className="mb-1">Concentration: Software Engineering</p>
-      </section>
-
-      {/* Skills */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">SKILLS</h2>
-        <p className="mb-1">
-          <span className="font-semibold">Languages & Frameworks:</span> C++ | C# | ASP.NET Core | .NET | React | Next.js | JavaScript | Python | jQuery | Java
-        </p>
-        <p className="mb-1">
-          <span className="font-semibold">UI & Tools:</span> Material UI | ShadCN | Tailwind CSS | Cursor AI | Generative AI | Visual Studio | Git & GitHub | Postman | Axios | React Query | Redis & Redis Bloom | Hangfire | Seq & Serilog
-        </p>
-        <p className="mb-1">
-          <span className="font-semibold">Cloud & DevOps:</span> AWS | Azure | Google Cloud | Oracle Cloud | Terraform | Ansible | Docker
-        </p>
-      </section>
+      {/* Education & Skills */}
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <section>
+          <h2 className="text-2xl font-semibold mb-2">Education</h2>
+          <p className="font-medium">The University of Texas at San Antonio</p>
+          <p>Bachelor of Science, Computer Science (GPA: 3.7)</p>
+          <p>Concentration: Software Engineering</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-semibold mb-2">Skills</h2>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+            <li><strong>Languages & Frameworks:</strong> C++, C#, ASP.NET Core, React, Next.js, JavaScript, TypeScript, Python, Java</li>
+            <li><strong>UI & Tools:</strong> Tailwind CSS, Material UI, ShadCN, Framer Motion, Git, Postman, Axios, React Query</li>
+            <li><strong>Cloud & DevOps:</strong> AWS, Azure, Google Cloud, Oracle Cloud, Terraform, Docker, Ansible, Redis</li>
+          </ul>
+        </section>
+      </motion.div>
 
       {/* Experience */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">EXPERIENCE</h2>
-
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">OP Computer Business Solutions — Full Stack Software Engineer</h3>
-          <p className="italic mb-1">May 2024 – Present</p>
-          <ul className="list-disc ml-6">
-            <li>Developed APIs, designed intuitive UI, and created robust database schemas for primary enterprise systems, particularly a Warehouse Management System (WMS), enhancing operational efficiency across commercial trade applications.</li>
-            <li>Implemented comprehensive Cyclic Inventory operations and reporting modules, alongside automated FIFO order processing via complex stored procedures.</li>
-            <li>Designed Lot Pallet Number (LPN) management, direct order processing, repack handling, and dynamic ordering based on SKU and LPN criteria.</li>
-            <li>Optimized system architecture for picking, sorting, and inbound/outbound logistics, reducing processing times by 20%.</li>
-            <li>Built real-time cargo tracking monitors to visualize box lifecycles from warehouse entry through broker inspection, ensuring 100% visibility.</li>
-            <li>Conduct weekly client meetings for requirements gathering, feature previews, and solution design, delivering accurate implementation plans and quotes.</li>
-            <li>Remote deployment to private cloud environments; collaborate with DevOps for CI/CD, infrastructure monitoring, and troubleshooting.</li>
-          </ul>
-        </article>
-
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">Rocket Labs Technologies — Full Stack Software Developer</h3>
-          <p className="italic mb-1">Jan 2023 – June 2024</p>
-          <ul className="list-disc ml-6">
-            <li>Built scalable web applications using ASP.NET Core backends and Next.js/React frontends, ensuring maintainability and performance.</li>
-            <li>Architected database schemas, API endpoints, and UI flows aligned with business requirements.</li>
-            <li>Led small teams in feature development, technology selection, and code reviews.</li>
-            <li>Managed projects end-to-end in a startup environment, from requirements to deployment.</li>
-          </ul>
-        </article>
-
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">H‑E‑B Digital — Co-op Software Engineer</h3>
-          <p className="italic mb-1">Aug 2022 – Dec 2022</p>
-          <ul className="list-disc ml-6">
-            <li>Developed a unified OneLogin authentication app with Flask & React, integrating SAML and OAuth protocols.</li>
-            <li>Participated in Agile sprints and automated CI/CD pipelines using GitLab.</li>
-          </ul>
-        </article>
-      </section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">Experience</h2>
+        <div className="space-y-8">
+          {/* OP CBS */}
+          <article className="space-y-2">
+            <h3 className="text-xl font-bold">OP Computer Business Solutions — Full Stack Software Engineer</h3>
+            <p className="italic text-gray-600">May 2024 – Present</p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+              <li>Developed robust APIs, intuitive UIs, and scalable database schemas for a Warehouse Management System, improving processing speed by 20%.</li>
+              <li>Implemented cyclic inventory modules and FIFO order automation via advanced stored procedures.</li>
+              <li>Built real-time cargo tracking dashboards, achieving 100% visibility from warehouse entry to broker inspection.</li>
+            </ul>
+          </article>
+          {/* Rocket Labs */}
+          <article className="space-y-2">
+            <h3 className="text-xl font-bold">Rocket Labs Technologies — Software Developer</h3>
+            <p className="italic text-gray-600">Jan 2023 – Jun 2024</p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+              <li>Architected full-stack solutions using ASP.NET Core backends and Next.js/React frontends.</li>
+              <li>Led cross-functional teams, defined API contracts, and optimized database performance.</li>
+            </ul>
+          </article>
+          {/* H-E-B Digital */}
+          <article className="space-y-2">
+            <h3 className="text-xl font-bold">H-E-B Digital — Co-op Software Engineer</h3>
+            <p className="italic text-gray-600">Aug 2022 – Dec 2022</p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+              <li>Developed a unified SAML & OAuth OneLogin portal using Flask and React.</li>
+              <li>Automated CI/CD workflows in GitLab, reducing deployment times by 30%.</li>
+            </ul>
+          </article>
+        </div>
+      </motion.section>
 
       {/* Projects */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">PROJECTS</h2>
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">Enterprise Logistics Monitoring System</h3>
-          <ul className="list-disc ml-6">
-            <li>Real-time monitoring dashboard providing analytics on shipping and warehouse operations.</li>
-            <li>Integrated live data streams to optimize supply chain processes.</li>
-          </ul>
-        </article>
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">Document Storage System (ERP)</h3>
-          <ul className="list-disc ml-6">
-            <li>Secure PDF storage platform with web-based authentication; deployed on AWS.</li>
-            <li>Automated MySQL data sync via cron jobs for timely updates.</li>
-          </ul>
-        </article>
-        <article className="mb-6">
-          <h3 className="text-xl font-bold">User Authentication Dashboard</h3>
-          <ul className="list-disc ml-6">
-            <li>Multi-protocol auth dashboard (SAML, OAuth) built with React & Flask.</li>
-            <li>Optimized backend performance to reduce authentication latency by 30%.</li>
-          </ul>
-        </article>
-      </section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">Select Projects</h2>
+        <div className="space-y-6">
+          <article>
+            <h3 className="text-lg font-bold">Enterprise Logistics Monitoring System</h3>
+            <p className="text-gray-700 dark:text-gray-300">Real-time analytics dashboard for shipping and warehouse operations integration.</p>
+          </article>
+          <article>
+            <h3 className="text-lg font-bold">Document Storage System (ERP)</h3>
+            <p className="text-gray-700 dark:text-gray-300">Secure PDF storage with AWS deployment and automated MySQL syncing.</p>
+          </article>
+        </div>
+      </motion.section>
 
       {/* Footer */}
-      <footer className="mt-8 text-center text-sm text-gray-600">
-        <p>
-          <a
-            href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            LinkedIn
-          </a>
-          {' | '}
-          <a
-            href="https://github.com/robertojuarezjose"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            GitHub
-          </a>
-        </p>
+      <footer className="text-center text-sm text-gray-600 dark:text-gray-400">
+        <p>© {new Date().getFullYear()} Jose Roberto Juarez</p>
       </footer>
-    </div>
+    </main>
   );
 };
 

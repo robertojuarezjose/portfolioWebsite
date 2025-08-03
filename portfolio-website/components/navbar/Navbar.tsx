@@ -10,7 +10,7 @@ function Navbar() {
             <Container className='flex flex-col sm:flex-row sm:justify-between sm:items-center flex-wrap py-8'>
                 <DarkMode></DarkMode>
 
-                <h1 className="text-2xl font-bold">My Portfolio</h1>
+                
 
                 <NavLinks />
 

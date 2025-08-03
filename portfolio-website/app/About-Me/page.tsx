@@ -40,7 +40,7 @@ export default function About() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        Hi, I'm Jose Roberto Juarez
+        Full Stack Software Engineer
       </motion.h1>
       <motion.p
         className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mb-12"
@@ -48,7 +48,7 @@ export default function About() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        Full Stack Software Developer with 2+ years of experience building enterprise-grade applications, specializing in logistics and Warehouse Management Systems (WMS). Skilled in both frontend and backend technologies, including ASP.NET Core, React, Next.js, and SQL Server, and experienced in cloud and DevOps practices using AWS, Azure, and Terraform.
+        With 2+ years of experience building enterprise-grade applications, specializing in logistics and Warehouse Management Systems (WMS). Skilled in both frontend and backend technologies, including ASP.NET Core, React, Next.js, and SQL Server, and experienced in cloud and DevOps practices using AWS, Azure, and Terraform.
       </motion.p>
 
       {/* Details */}
