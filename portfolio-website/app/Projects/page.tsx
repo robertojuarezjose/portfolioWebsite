@@ -15,7 +15,7 @@ const projects = [
   { Name: "First Cash Lock Detection", Description: "Solution to detect lock‑screen methodologies for First Cash.", Url: "", Date_Created: "2023-05-22", Owner: "Rocket Labs Technologies" },
   { Name: "Airport Monitor", Description: "Real-time dashboard displaying the live status of cargo boxes.", Url: "https://medium.com/@robertojuarezjose/real-time-dasboard-displaying-the-live-status-of-cargo-boxes-from-warehouse-arrival-through-13cc2893cb13", Date_Created: "2025-07-24", Owner: "Op Computer Business Solutions / SR Forwarding / Laredo Cold Services" },
   { Name: "Logistics Management System & Monitor", Description: "Integrated logistics platform for cargo traffic tracking, document uploads, and order preparation.", Url: "", Date_Created: "2023-05-22", Owner: "Op Computer Business Solutions / RXO Logistics" },
-  { Name: "Monitor de Colores", Description: "Visual time-tracking monitor for each step in the cargo handling process.", Url: "", Date_Created: "2023-05-22", Owner: "Op Computer Business Solutions / SR Forwarding / Laredo Cold Services" },
+  { Name: "Monitor de Colores", Description: "Visual time-tracking monitor for each step in the cargo handling process.", Url: "", Date_Created: "2025-05-22", Owner: "Op Computer Business Solutions / SR Forwarding / Laredo Cold Services" },
   { Name: "Monitor de Trazabilidad", Description: "Tracks time and documentation status per traffic reference with interactive upload and event marking.", Url: "", Date_Created: "2025-03-03", Owner: "Op Computer Business Solutions / American Export" },
 ];
 
