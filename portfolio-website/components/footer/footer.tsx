@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaHackerrank, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaHackerrank, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -28,6 +28,14 @@ const Footer = () => {
                     className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300"
                 >
                     <FaLinkedin size={24} />
+                </a>
+                <a
+                    href="https://robertojuarezjose.medium.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300"
+                >
+                    <FaMedium size={24} />
                 </a>
             </div>
             <p className="text-black dark:text-white text-sm">

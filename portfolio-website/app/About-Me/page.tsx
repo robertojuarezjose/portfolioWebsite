@@ -11,6 +11,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/dialog/DialogComponents";
+import { resumeData } from "@/lib/resume-data";
 
 export default function About() {
   const [open, setOpen] = useState(false);
@@ -48,7 +49,7 @@ export default function About() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        With 2+ years of experience building enterprise-grade applications, specializing in logistics and Warehouse Management Systems (WMS). Skilled in both frontend and backend technologies, including ASP.NET Core, React, Next.js, and SQL Server, and experienced in cloud and DevOps practices using AWS, Azure, and Terraform.
+        {resumeData.summary}
       </motion.p>
 
       {/* Details */}
@@ -62,15 +63,11 @@ export default function About() {
         <div>
           <h2 className="text-2xl font-semibold mb-3">Experience</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-800 dark:text-gray-200">
-            <li>
-              <strong>OP Computer Business Solutions</strong> — Full Stack Software Engineer (May 2024–Present): Developed APIs, UIs, and database schemas for a WMS, automated FIFO order processing, and built real-time cargo tracking monitors.
-            </li>
-            <li>
-              <strong>Rocket Labs Technologies</strong> — Software Developer (Jan 2023–Jun 2024): Led feature development on ASP.NET Core and Next.js/React projects, architected data models and API flows, and managed small teams.
-            </li>
-            <li>
-              <strong>H-E-B Digital</strong> — Co-op Software Engineer (Aug–Dec 2022): Created a secure OneLogin authentication portal with Flask and React, and implemented CI/CD pipelines.
-            </li>
+            {resumeData.experience.map((exp) => (
+              <li key={`${exp.company}-${exp.role}`}>
+                <strong>{exp.company}</strong> — {exp.role} ({exp.period}): {exp.bullets[0]}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -78,9 +75,11 @@ export default function About() {
         <div>
           <h2 className="text-2xl font-semibold mb-3">Skills</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-800 dark:text-gray-200">
-            <li><strong>Languages & Frameworks:</strong> C#, ASP.NET Core, React, Next.js, JavaScript, TypeScript, Python, C++</li>
-            <li><strong>UI & Tools:</strong> Tailwind CSS, Material UI, ShadCN, Framer Motion, Git, Postman, Axios, React Query</li>
-            <li><strong>Cloud & DevOps:</strong> AWS, Azure, Google Cloud, Terraform, Docker, Hangfire, Redis</li>
+            {resumeData.skills.map((cat) => (
+              <li key={cat.label}>
+                <strong>{cat.label}:</strong> {cat.items.join(", ")}
+              </li>
+            ))}
           </ul>
         </div>
       </motion.div>
@@ -107,32 +106,30 @@ export default function About() {
           <DialogHeader>
             <DialogTitle>Get in Touch</DialogTitle>
             <DialogDescription className="text-left">
-              <p><strong>Name:</strong> Jose Roberto Juarez</p>
-              <p><strong>Location:</strong> Laredo, Texas</p>
-              <p><strong>Phone:</strong> (956) 955-0163</p>
-              <p><strong>Email:</strong> robertojuarezjose90@gmail.com</p>
+              <p><strong>Name:</strong> {resumeData.name}</p>
+              <p><strong>Location:</strong> {resumeData.contact.location}</p>
+              <p><strong>Phone:</strong> {resumeData.contact.phone}</p>
               <p>
-                <strong>LinkedIn:</strong>{' '}
-                <a
-                  href="https://www.linkedin.com/in/roberto-juárez-b0b76a225/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Profile
+                <strong>Email:</strong>{" "}
+                <a className="text-blue-500 hover:underline" href={`mailto:${resumeData.contact.emails[0].value}`}>
+                  {resumeData.contact.emails[0].value}
                 </a>
               </p>
-              <p>
-                <strong>GitHub:</strong>{' '}
-                <a
-                  href="https://github.com/robertojuarezjose"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  robertojuarezjose
-                </a>
-              </p>
+              {resumeData.contact.links.map((l) => {
+                const display = l.label === 'GitHub'
+                  ? 'robertojuarezjose'
+                  : l.label === 'Website'
+                  ? 'robertojuarezjose.com'
+                  : 'Profile';
+                return (
+                  <p key={l.href}>
+                    <strong>{l.label}:</strong>{" "}
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                      {display}
+                    </a>
+                  </p>
+                );
+              })}
             </DialogDescription>
           </DialogHeader>
           <div className="mt-4 flex justify-end">
